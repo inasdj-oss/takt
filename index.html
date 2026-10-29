@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Takt – dein persönlicher Wochenplaner für Beruf, Studium, Sport und Privates." />
+    <meta name="theme-color" content="#fbfbfa" />
+    <link rel="icon" href="/takt/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/takt/favicon.svg" />
+    <link rel="apple-touch-icon" href="/takt/apple-touch-icon-180x180.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Takt" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Takt – Wochenplaner</title>
+    <script>
+      // Hell/Dunkel schon vor dem ersten Bild setzen, damit nichts aufblitzt.
+      ;(function () {
+        var preference = 'system'
+        try {
+          preference = localStorage.getItem('takt:theme') || 'system'
+        } catch (e) {}
+        var dark =
+          preference === 'dark' ||
+          (preference === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+      })()
+    </script>
+    <script type="module" crossorigin src="/takt/assets/index-B1SShxM3.js"></script>
+    <link rel="modulepreload" crossorigin href="/takt/assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="/takt/assets/react-DCTAcUCH.js">
+    <link rel="modulepreload" crossorigin href="/takt/assets/vendor-Bhd9R-o2.js">
+    <link rel="stylesheet" crossorigin href="/takt/assets/vendor-Tg0PpPht.css">
+    <link rel="stylesheet" crossorigin href="/takt/assets/index-CH66xPOC.css">
+  <link rel="manifest" href="/takt/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
